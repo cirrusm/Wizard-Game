@@ -1,5 +1,17 @@
 import random
 
+class Enemy:
+    def __init__(self, atkl, atkh):
+        self.atkl = atkl
+        self.atkh = atkh
+
+    def getAtk(self):
+        print(self.atkl)
+
+enemy1 = Enemy(50, 60)
+enemy1.getAtk()
+
+'''
 playerhp = 260 
 enemyatkl = 60
 enemyatkh = 80
@@ -15,3 +27,4 @@ while playerhp > 0:
     if playerhp == 30:
         print("You have low health beech")
         break
+    '''
