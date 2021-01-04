@@ -32,7 +32,7 @@ class Person:
             self.hp = 0
         return self.hp
 
-    def geak(self, dmg):
+    def heal(self, dmg):
         self.hp += dmg
         if self.hp > self.maxhp:
             self.hp = self.maxhp

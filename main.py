@@ -35,16 +35,25 @@ while running:
 
         spell = player.magic[magic_choice]
         magicdmg = player.magic[magic_choice].generate_damage()
-
         current_mp = player.get_mp()
 
         if spell.cost > current_mp:
             print(bcolors.FAIL + "\nYou dont have enough MP to use this move\n" +bcolors.ENDC)
             continue
+
+        if spell.type == "white":
+            player.heal(magicdmg)
+            print(f'{bcolors.OKBLUE} \n {spell.name} heals for {magicdmg} HP {bcolors.ENDC}')
+        elif spell.type == "black":
+            enemy.take_damage(magicdmg)
+            print(f'{bcolors.OKBLUE} \n {spell.name} deals {magicdmg} points of damage {bcolors.ENDC}')
+
+
+
         
         player.reduce_mp(spell.cost)
         enemy.take_damage(magicdmg)
-        print(bcolors.OKBLUE + "\n" + spell.name + " deals", str(magicdmg), " points of damage")
+        
         
     enemy_choice = 1
 
