@@ -29,7 +29,7 @@ class Person:
         return random.randrange(self.atkl, self.akth)
 
     def take_damage(self, dmg):
-        self.hp -= dmg
+        (self.hp) -= int(dmg)
         if self.hp < 0:
             self.hp = 0
         return self.hp
@@ -78,14 +78,25 @@ class Person:
             i+=1
 
     def get_stats(self):
-        bar = ""
+        hpbar = ""
         bar_ticks = (self.hp/self.maxhp) * 100 / 4
+
+        mpbar = ""
+        mpticks = (self.mp / self.maxmp) * 100 / 10
         while bar_ticks > 0:
-            bar+= "█"
+            hpbar+= "█"
             bar_ticks -= 1
         
-        while len(bar) < 25:
-            bar += " "
+        while len(hpbar) < 25:
+            hpbar += " "
 
-        print(f"                  _________________________          __________")
-        print(f"{self.name}:   {self.hp}/{self.maxhp} {bcolors.OKGREEN}|{bar}|{bcolors.ENDC} {self.mp}/{self.maxmp}       {bcolors.OKBLUE}|██████████|{bcolors.ENDC} ")
+        while mpticks > 0:
+            mpbar += "█"
+            mpticks -= 1
+        while len(mpbar) < 10:
+            mpbar+= " "
+
+        print(f"                _________________________               __________")
+        print(f"{self.name}:   {self.hp}/{self.maxhp} {bcolors.OKGREEN}|{hpbar}|{bcolors.ENDC} {self.mp}/{self.maxmp}       {bcolors.OKBLUE}|{mpbar}|{bcolors.ENDC} ")
+
+

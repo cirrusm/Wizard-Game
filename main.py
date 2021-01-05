@@ -30,12 +30,12 @@ player_spells = [fire, thunder, blizzard, meteor, cure, cura]
 player_items = [{"item" : potion, 'quantity': 5}, {"item" : hipotion, 'quantity': 1}, {"item" : superpotion, 'quantity': 1}, {"item" : elixer, 'quantity': 1}, {"item" : hielixer, 'quantity': 2}, {"item" : grenade, 'quantity': 2}]
 
 
-player1 = Person('Cirrus', 460, 65, 60, 34, player_spells, player_items)
-player2 = Person('Vika',460, 65, 60, 34, player_spells, player_items)
+player1 = Person('Jim', 460, 65, 60, 34, player_spells, player_items)
+player2 = Person('Bob',460, 65, 60, 34, player_spells, player_items)
 player3 = Person('Dog', 460, 65, 60, 34, player_spells, player_items)
 enemy = Person('Meanie', 1200, 65, 45, 25, [], [])
 
-players = [player1, player2, player3]
+players = [player1]
 running = True
 i=0
 print(bcolors.FAIL + bcolors.BOLD + "AN ENEMY ATTACKS" + bcolors.ENDC)
@@ -113,8 +113,8 @@ while running:
 
     
     enemy_dmg = enemy.generate_damage()
-    player.take_damage(enemy_dmg)
-    print(f"Enemy attacks for {enemy_dmg}")
+    player.take_damage(int(enemy_dmg))
+    print(f"Enemy attacks for {(enemy_dmg)}")
 
     print('--------------------------------')
     print(f"{bcolors.FAIL}Enemy HP: {str(enemy.get_hp())}/{enemy.get_max_hp()} {bcolors.ENDC}")
