@@ -12,8 +12,9 @@ class bcolors:
     UNDERLINE = '\033[4m'
 
 class Person:
-    def __init__(self, hp, mp, atk, df, magic, items):
+    def __init__(self, name, hp, mp, atk, df, magic, items):
         self.maxhp = hp
+        self.name = name
         self.hp = hp
         self.maxmp = mp
         self.mp = mp
@@ -55,17 +56,17 @@ class Person:
 
     def choose_action(self):
         i = 1
-        print(bcolors.OKBLUE + bcolors.BOLD + "Actions" + bcolors.ENDC)
+        print(bcolors.OKBLUE + bcolors.BOLD + "    Actions" + bcolors.ENDC)
         for item in self.actions:
-            print("    " + str(i) + ':', item)
+            print("        " + str(i) + ':', item)
             i += 1
     
     def choose_magic(self):
         i = 1
 
-        print(bcolors.OKBLUE + bcolors.BOLD + "MAGIC" + bcolors.ENDC)
+        print(bcolors.OKBLUE + bcolors.BOLD + "    MAGIC" + bcolors.ENDC)
         for spell in self.magic:
-            print("\n    " + str(i) + ':', spell.name, "(COST:", str(spell.cost) + ")")
+            print("\n        " + str(i) + ':', spell.name, "(COST:", str(spell.cost) + ")")
             i += 1
 
     def choose_item(self):
@@ -73,5 +74,18 @@ class Person:
 
         print(f'\n {bcolors.OKGREEN} {bcolors.BOLD} ITEMS {bcolors.ENDC}')
         for item in self.items:
-            print("    " + str(i) + '.', item['item'].name, ':', item['item'].description, "(", item['quantity'], "available)")
+            print("        " + str(i) + '.', item['item'].name, ':', item['item'].description, "(", item['quantity'], "available)")
             i+=1
+
+    def get_stats(self):
+        bar = ""
+        bar_ticks = (self.hp/self.maxhp) * 100 / 4
+        while bar_ticks > 0:
+            bar+= "█"
+            bar_ticks -= 1
+        
+        while len(bar) < 25:
+            bar += " "
+
+        print(f"                  _________________________          __________")
+        print(f"{self.name}:   {self.hp}/{self.maxhp} {bcolors.OKGREEN}|{bar}|{bcolors.ENDC} {self.mp}/{self.maxmp}       {bcolors.OKBLUE}|██████████|{bcolors.ENDC} ")
