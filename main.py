@@ -30,9 +30,9 @@ player_spells = [fire, thunder, blizzard, meteor, cure, cura]
 player_items = [{"item" : potion, 'quantity': 5}, {"item" : hipotion, 'quantity': 1}, {"item" : superpotion, 'quantity': 1}, {"item" : elixer, 'quantity': 1}, {"item" : hielixer, 'quantity': 2}, {"item" : grenade, 'quantity': 2}]
 
 
-player1 = Person('Jim', 460, 65, 60, 34, player_spells, player_items)
-player2 = Person('Bob',460, 65, 60, 34, player_spells, player_items)
-player3 = Person('Dog', 460, 65, 60, 34, player_spells, player_items)
+player1 = Person('Joe', 460, 65, 60, 34, player_spells, player_items)
+player2 = Person('Jim',460, 65, 60, 34, player_spells, player_items)
+player3 = Person('Jed', 460, 65, 60, 34, player_spells, player_items)
 enemy = Person('Meanie', 1200, 65, 45, 25, [], [])
 
 players = [player1]

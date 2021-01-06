@@ -13,7 +13,7 @@ enemy1.getAtk()
 
 '''
 playerhp = 260 
-enemyatkl = 60
+enemyatkl = 600
 enemyatkh = 80
 
 while playerhp > 0:
@@ -25,6 +25,6 @@ while playerhp > 0:
     print("Enemy strikes for ", dmg, "damage ponts. current hp is ", playerhp)
     
     if playerhp == 30:
-        print("You have low health beech")
+        print("You have low health")
         break
     '''
