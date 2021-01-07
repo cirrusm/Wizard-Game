@@ -14,15 +14,15 @@ meteor = Spell('Meteor', 20, 200, 'black')
 quake = Spell('Quake', 14, 140, 'black')
 
 #White Magic (Healing)
-cure = Spell("Cure", 12, 120, 'white')
-cura = Spell("Cura", 18, 200, 'white')
+cure = Spell("Cure", 13, 110, 'white')
+cura = Spell("Cura", 17, 220, 'white')
 
 #Creating items
 potion = Item("Potion", "potion", "Heals 50 HP", 50)
 hipotion = Item("Hi-Potion", "potion", "Heals 100 HP", 100)
 superpotion = Item("Super Potion", "potion", "Heals 500 HP", 500)
-elixer = Item("Elixer", "elixer", "Fully restores HP/MP of one party member", 9999)
-hielixer = Item("MegaElixer", "elixer", "Fully restores party's HP/MP", 9999)
+elixer = Item("Elixer", "elixer", "Fully restores HP/MP of one party member", 999)
+hielixer = Item("MegaElixer", "elixer", "Fully restores party's HP/MP", 999)
 
 grenade = Item("Grenade", "attack","Deals 500 damage", 500)
 
