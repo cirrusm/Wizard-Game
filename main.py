@@ -7,10 +7,10 @@ print("\n\n")
 
 print("\n\n")
 #Black Magic
-fire = Spell('Fire', 10, 100, 'black')
-thunder = Spell('Thunder', 10, 100, 'black')
-blizzard = Spell('Blizzard', 10, 100, 'black')
-meteor = Spell('Meteor', 20, 200, 'black')
+fire = Spell('Fire', 15, 100, 'black')
+thunder = Spell('Thunder', 11, 100, 'black')
+blizzard = Spell('Blizzard', 20, 100, 'black')
+meteor = Spell('Meteor', 21, 200, 'black')
 quake = Spell('Quake', 14, 140, 'black')
 
 #White Magic (Healing)
