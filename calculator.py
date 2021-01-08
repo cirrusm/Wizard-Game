@@ -11,7 +11,7 @@ def performMath():
     global previous
     equation = ""
     if previous == 0:
-        equation = input("Enter equation: ")
+        equation = input("Enter equation:  ")
     else: 
         equation = input(str(previous))
 
