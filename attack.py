@@ -8,7 +8,7 @@ class Enemy:
     def getAtk(self):
         print(self.atkl)
 
-enemy1 = Enemy(50, 61)
+enemy1 = Enemy(51, 61)
 enemy1.getAtk()
 
 '''

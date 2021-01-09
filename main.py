@@ -11,7 +11,7 @@ fire = Spell('Fire', 15, 100, 'black')
 thunder = Spell('Thunder', 11, 100, 'black')
 blizzard = Spell('Blizzard', 20, 100, 'black')
 meteor = Spell('Meteor', 21, 200, 'black')
-quake = Spell('Quake', 14, 140, 'black')
+quake = Spell('Quake', 15, 140, 'black')
 
 #White Magic (Healing)
 cure = Spell("Cure", 13, 110, 'white')
